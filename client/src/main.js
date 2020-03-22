@@ -7,10 +7,11 @@ import "vue-material/dist/vue-material.min.css";
 import "vue-material/dist/theme/default.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import vueVimeoPlayer from "vue-vimeo-player";
 
 Vue.use(VueMaterial);
 Vue.use(BootstrapVue);
-
+Vue.use(vueVimeoPlayer);
 Vue.config.productionTip = false;
 
 new Vue({

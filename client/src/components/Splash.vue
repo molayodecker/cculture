@@ -18,6 +18,16 @@
         </div>
       </div>
     </div>
+    <div style="width:1oo%; height:100%">
+      <vimeo-player
+        ref="player"
+        :video-id="399628701"
+        @ready="onReady"
+        :player-height="height"
+        :player-width="width"
+        :options="{ responsive: true }"
+      ></vimeo-player>
+    </div>
     <div class="speakers-bg">
       <h2 class="center-title">
         <span class="color_11">
@@ -160,7 +170,12 @@ import NavigationPage from "./navigation.vue";
 export default {
   data: function() {
     return {
-      windowScrolled: false
+      windowScrolled: false,
+      videoID: "141851770",
+      height: 320,
+      width: 640,
+      options: {},
+      playerReady: false
     };
   },
   components: {
@@ -183,6 +198,15 @@ export default {
         console.log("hi", document.body.scrollTop);
         this.windowScrolled = false;
       }
+    },
+    onReady() {
+      this.playerReady = true;
+    },
+    play() {
+      this.$refs.player.play();
+    },
+    pause() {
+      this.$refs.player.pause();
     }
   },
   mounted: function() {
@@ -242,7 +266,9 @@ body {
   line-height: 1.15;
   letter-spacing: 0.15em;
   text-shadow: #ffffff;
+  background-color: #ffffff;
   margin: 15px auto;
+  width: 40%;
 }
 
 .speakers-bg {
