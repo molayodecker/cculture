@@ -9,11 +9,14 @@
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#">Home</b-nav-item>
           <b-nav-item href="#">Who are we</b-nav-item>
-          <b-nav-item>
+          <!-- <b-nav-item>
             <router-link to="/speaker">Speakers</router-link>
-          </b-nav-item>
-          <b-nav-item href="#">Volunteers</b-nav-item>
+          </b-nav-item>-->
+          <b-nav-item href="#speakers">Speakers</b-nav-item>
+          <b-nav-item href="#">Schedule</b-nav-item>
           <b-nav-item href="#">Register</b-nav-item>
+          <b-nav-item href="#location">Location</b-nav-item>
+          <b-nav-item href="#">FAQ</b-nav-item>
           <b-nav-item class="donate" href="#">Donate</b-nav-item>
         </b-navbar-nav>
       </b-collapse>

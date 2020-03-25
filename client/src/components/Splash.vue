@@ -28,7 +28,7 @@
         :options="{ responsive: true }"
       ></vimeo-player>
     </div>
-    <div class="speakers-bg">
+    <div id="speakers" class="speakers-bg">
       <h2 class="center-title">
         <span class="color_11">
           <span style="letter-spacing:0.15em; ">SPEAKERS</span>
@@ -114,25 +114,95 @@
         <div class="grid-item grid-close">Close</div>
       </div>
     </div>
-    <div>
+    <div id="location" style="width: 100%; height:100%;">
       <div class="sponsors-header">
         <h2 class="center-title">
-          <font>SPONSORS</font>
+          <font>LOCATION</font>
         </h2>
       </div>
-      <div class="sponsor-container">
-        <img
-          src="../assets/sponsors/cohpc-logo.png"
-          alt="City of Hope Presbyterian Church"
-        />
-        <img
-          src="../assets/sponsors/cpc-logo.png"
-          alt="City of Hope Presbyterian Church"
-        />
-        <img
-          src="../assets/sponsors/rts-logo.png"
-          alt="City of Hope Presbyterian Church"
-        />
+      <div>
+        <img src="../assets/location.png" />
+        <div
+          class="location-content-wrap"
+          style="background-color: #59C1A7; color: #FFFFFF; margin-left: 40px;"
+        >
+          <h4 style="margin-bottom: 10px;">Address</h4>
+          <div style="margin-bottom: 10px;">
+            10001 MD-108, Columbia, MD 21044
+          </div>
+          <div>
+            <a
+              href="https://goo.gl/maps/72ahEW1Fi9HhXvjz6"
+              target="_blank"
+              style="color:#ffffff; text-decoration: underline;"
+              >Explore the Avenue</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <section class="sponsor-description">
+        <div style="display=flex; flex-direction: row; padding: 50px;">
+          <h3 style="font-size:39.9px">Become a Sponsor</h3>
+          <div style="font-size:18.4px">
+            Tell us a little bit about yourself and we will get in touch!
+          </div>
+          <div>
+            <a
+              href="mailto:info@truthandculture.com"
+              target="_blank"
+              style="color:#000000; text-decoration: underline;"
+              >Find out More</a
+            >
+          </div>
+          <div class="sponsor-img">
+            <a href="https://www.cityofhopechurch.net/">
+              <img
+                src="../assets/sponsors/coh.png"
+                alt="City of Hope Presbyterian Church"
+            /></a>
+            <a href="https://www.columbiapres.org/">
+              <img
+                src="../assets/sponsors/cpc.png"
+                alt="Columbia Presbyterian Church"
+              />
+            </a>
+            <a href="http://rts.edu/washington/">
+              <img
+                src="../assets/sponsors/rts.png"
+                alt="Reformed Theological Seminary"
+              />
+            </a>
+            <a href="https://grace.community/">
+              <img
+                src="../assets/sponsors/gracelogo.svg"
+                alt="Grace Community Church"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      style="display:flex; flex-direction: row; justify-content: space-evenly;"
+    >
+      <div
+        style="display: block; background-color: #9B3DB2; width: 50%; font-family: Acre-Semibold; color:#ffffff;"
+      >
+        <h3
+          style="margin: 200px 0 20px 300px; text-align: center; font-family: Acre-Semibold; color:#ffffff;"
+        >
+          Interested in past recordings?
+        </h3>
+        <p style="text-align: center;">
+          Access keynotes, sessions and more from previous years at Christ and
+          Culture.
+          <span class="past-events-content-wrapper">View All</span>
+        </p>
+      </div>
+      <div style="width: 50%">
+        <img src="../assets/past-event.jpg" />
       </div>
     </div>
     <div class="subscribe-container">
@@ -223,6 +293,7 @@ body {
   padding: 0px;
   background-color: #cccccc;
 }
+
 .jumbotron {
   display: block;
   background-image: url("../assets/splash.svg");
@@ -250,6 +321,43 @@ body {
   line-height: 1;
   text-transform: uppercase;
   font: 25px Roboto !important;
+}
+
+.sponsor-description {
+  height: auto;
+  position: relative;
+  clear: both;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #ffcf00;
+  font-family: "Acre-Semibold";
+}
+
+.sponsor-img {
+  display: flex;
+}
+
+.sponsor-img img {
+  margin: 20px;
+  background: #fff;
+  height: 100px;
+  width: 140px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.past-events-content-wrapper {
+  font-family: "Acre-Semibold" !important;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #333333;
+  color: #ffffff;
 }
 
 .container {
@@ -303,6 +411,14 @@ body {
   filter: none;
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.1);
+}
+
+.location-content-wrap {
+  padding: 60px 50px;
+  position: absolute;
+  bottom: 1500px;
+  width: 320px;
+  font-family: "Acre-Semibold";
 }
 
 .color_11 {
@@ -533,5 +649,10 @@ h2 {
 .footer {
   text-align: center;
   background-color: #eee;
+}
+
+@font-face {
+  font-family: "Acre-Semibold";
+  src: url("../assets/fonts/acre-semi.otf");
 }
 </style>

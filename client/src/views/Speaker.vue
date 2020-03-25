@@ -1,13 +1,14 @@
 <template>
-  <div>
+  <div style="display: flex; flex-direction: row;">
     <div class="speaker-profile">
       <img src="../assets/speaker/daniel-speaker.jpg" />
-      <p class="speaker-description-overlay"></p>
-      <h3
-        style="position: absolute; top:50%; color:#ffffff; width:100%; text-align:center; padding:50px; background-color:#000000"
-      >
-        Daniel Fagbuyi
-      </h3>
+      <h1>Daniel Fagbuyi</h1>
+      <button>Get to know Daniel</button>
+    </div>
+    <div class="speaker-profile">
+      <img src="../assets/speaker/daniel-speaker.jpg" />
+      <h1>Josiah Katumu</h1>
+      <button>Get to know Josiah</button>
     </div>
   </div>
 </template>
@@ -16,7 +17,10 @@ export default {};
 </script>
 <style scoped>
 .speaker-profile {
-  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 650px;
+  margin: auto;
+  text-align: center;
 }
 .speaker-description-overlay {
   position: absolute;
@@ -39,11 +43,23 @@ export default {};
 
 img {
   width: 100%;
-  height: 100%;
 }
 
 /* .speaker-profile:hover .speaker-description-overlay {
   visibility: visible;
   opacity: 1;
 } */
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
 </style>
