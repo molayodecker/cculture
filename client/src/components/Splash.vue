@@ -37,9 +37,11 @@
       <div class="wsite-speakers">
         <md-avatar class="md-large">
           <img src="../assets/speaker/daniel-speaker.png" alt="daniel" />
+          <p class="img__description">Daniel Fagbuyi</p>
         </md-avatar>
         <md-avatar class="md-large">
           <img src="../assets/speaker/katumu-speaker.jpg" alt="katumu" />
+          <p class="img__description">Josiah Katumu</p>
         </md-avatar>
       </div>
     </div>
@@ -490,6 +492,25 @@ h2 {
 
 .grid-white {
   background-color: #cccaca;
+}
+
+.img__description {
+  position: absolute;
+  top: 191px;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.md-avatar.md-large:hover .img__description {
+  visibility: visible;
+  opacity: 1;
 }
 
 .logo {

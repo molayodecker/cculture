@@ -9,7 +9,9 @@
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#">Home</b-nav-item>
           <b-nav-item href="#">Who are we</b-nav-item>
-          <b-nav-item href="#">Speakers</b-nav-item>
+          <b-nav-item>
+            <router-link to="/speaker">Speakers</router-link>
+          </b-nav-item>
           <b-nav-item href="#">Volunteers</b-nav-item>
           <b-nav-item href="#">Register</b-nav-item>
           <b-nav-item class="donate" href="#">Donate</b-nav-item>
@@ -41,6 +43,8 @@ export default {
 }
 
 .logo {
+  background-color: #ffffff;
+  border-radius: 50%;
   width: 80px;
   height: 80px;
 }
