@@ -13,8 +13,9 @@
             <router-link to="/speaker">Speakers</router-link>
           </b-nav-item>-->
           <b-nav-item href="#speakers">Speakers</b-nav-item>
-          <b-nav-item href="#">Schedule</b-nav-item>
-          <b-nav-item href="#">Register</b-nav-item>
+          <b-nav-item href="#agenda">Schedule</b-nav-item>
+          <b-nav-item href="#topic">Topics</b-nav-item>
+          <b-nav-item href="#register">Register</b-nav-item>
           <b-nav-item href="#location">Location</b-nav-item>
           <b-nav-item href="#">FAQ</b-nav-item>
           <b-nav-item class="donate" href="#">Donate</b-nav-item>

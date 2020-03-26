@@ -1,20 +1,30 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Event from "@/views/Event.vue";
 import Speaker from "@/views/Speaker.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "home",
+  //   component: Home
+  // },
   {
     path: "/",
-    name: "home",
-    component: Home
+    redirect: "/event"
   },
   {
     path: "/speaker",
     name: "speaker",
     component: Speaker
+  },
+  {
+    path: "/event",
+    name: "event",
+    component: Event
   },
   {
     path: "/about",
@@ -32,5 +42,5 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
-
+router.replace({ path: "/", redirect: "/event" });
 export default router;

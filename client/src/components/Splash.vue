@@ -45,7 +45,7 @@
         </md-avatar>
       </div>
     </div>
-    <div class="ticket-container" style="text-align:center;">
+    <div id="register" class="ticket-container" style="text-align:center;">
       <div>
         <h2 class="wsite-content-title">
           <font color="#ffffff" size="7">REGISTER NOW!</font>
@@ -53,9 +53,9 @@
       </div>
       <div class="register-button">GET TICKET</div>
     </div>
-    <div>
+    <div id="agenda">
       <div class="agenda">
-        <h2 class="center-title">
+        <h2 class="center-title" style="margin: 0">
           <span>AGENDA</span>
         </h2>
       </div>
@@ -114,9 +114,34 @@
         <div class="grid-item grid-close">Close</div>
       </div>
     </div>
+    <div id="topic">
+      <div class="topic-header">
+        <h2 class="center-title" style="margin: 0px">
+          <font>TOPICS</font>
+        </h2>
+      </div>
+      <div class="sponsor-description">
+        <div>
+          <div>
+            <h4>Shame</h4>
+          </div>
+          <div>
+            <h4>Delayed Marriage</h4>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h4>Parental Disagreement</h4>
+          </div>
+          <div>
+            <h4>Delayed Conception</h4>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="location" style="width: 100%; height:100%;">
       <div class="sponsors-header">
-        <h2 class="center-title">
+        <h2 class="center-title" style="margin: 0">
           <font>LOCATION</font>
         </h2>
       </div>
@@ -126,8 +151,8 @@
           class="location-content-wrap"
           style="background-color: #59C1A7; color: #FFFFFF; margin-left: 40px;"
         >
-          <h4 style="margin-bottom: 10px;">Address</h4>
-          <div style="margin-bottom: 10px;">
+          <h4 class="address-title">Address</h4>
+          <div class="address-body">
             10001 MD-108, Columbia, MD 21044
           </div>
           <div>
@@ -141,67 +166,65 @@
         </div>
       </div>
     </div>
-    <div>
-      <section class="sponsor-description">
-        <div style="display=flex; flex-direction: row; padding: 50px;">
-          <h3 style="font-size:39.9px">Become a Sponsor</h3>
-          <div style="font-size:18.4px">
-            Tell us a little bit about yourself and we will get in touch!
-          </div>
-          <div>
-            <a
-              href="mailto:info@truthandculture.com"
-              target="_blank"
-              style="color:#000000; text-decoration: underline;"
-              >Find out More</a
-            >
-          </div>
-          <div class="sponsor-img">
-            <a href="https://www.cityofhopechurch.net/">
-              <img
-                src="../assets/sponsors/coh.png"
-                alt="City of Hope Presbyterian Church"
-            /></a>
-            <a href="https://www.columbiapres.org/">
-              <img
-                src="../assets/sponsors/cpc.png"
-                alt="Columbia Presbyterian Church"
-              />
-            </a>
-            <a href="http://rts.edu/washington/">
-              <img
-                src="../assets/sponsors/rts.png"
-                alt="Reformed Theological Seminary"
-              />
-            </a>
-            <a href="https://grace.community/">
-              <img
-                src="../assets/sponsors/gracelogo.svg"
-                alt="Grace Community Church"
-              />
-            </a>
-          </div>
+    <div class="sponsor-description">
+      <div style="width:50%; padding: 20px;">
+        <h3 class="sponsor-header">Become a Sponsor</h3>
+        <div style="font-size:18.4px">
+          Tell us a little bit about yourself and we will get in touch!
         </div>
-      </section>
+        <div>
+          <a
+            href="mailto:info@truthandculture.com"
+            target="_blank"
+            style="color:#000000; text-decoration: underline;"
+            >Find out More</a
+          >
+        </div>
+      </div>
+      <div class="sponsor-img">
+        <a href="https://www.cityofhopechurch.net/">
+          <img
+            src="../assets/sponsors/coh.png"
+            alt="City of Hope Presbyterian Church"
+        /></a>
+        <a href="https://www.columbiapres.org/">
+          <img
+            src="../assets/sponsors/cpc.png"
+            alt="Columbia Presbyterian Church"
+          />
+        </a>
+        <a href="http://rts.edu/washington/">
+          <img
+            src="../assets/sponsors/rts.png"
+            alt="Reformed Theological Seminary"
+          />
+        </a>
+        <a href="https://grace.community/">
+          <img
+            src="../assets/sponsors/gracelogo.svg"
+            alt="Grace Community Church"
+          />
+        </a>
+      </div>
     </div>
     <div
-      style="display:flex; flex-direction: row; justify-content: space-evenly;"
+      style="display:flex; flex-direction: row; justify-content: space-evenly; flex-wrap:wrap"
     >
-      <div
-        style="display: block; background-color: #9B3DB2; width: 50%; font-family: Acre-Semibold; color:#ffffff;"
-      >
-        <h3
-          style="margin: 200px 0 20px 300px; text-align: center; font-family: Acre-Semibold; color:#ffffff;"
-        >
-          Interested in past recordings?
-        </h3>
-        <p style="text-align: center;">
-          Access keynotes, sessions and more from previous years at Christ and
-          Culture.
+      <div class="past-event-container">
+        <div class="past-event-block">
+          <h2>Interested in past recordings?</h2>
+        </div>
+        <div class="past-event">
+          <p>
+            Access keynotes, sessions and more from previous years at the Christ
+            and Culture Conference.
+          </p>
+        </div>
+        <div class="past-event">
           <span class="past-events-content-wrapper">View All</span>
-        </p>
+        </div>
       </div>
-      <div style="width: 50%">
+      <div style="width: 50%; float:right;">
         <img src="../assets/past-event.jpg" />
       </div>
     </div>
@@ -297,6 +320,7 @@ body {
 .jumbotron {
   display: block;
   background-image: url("../assets/splash.svg");
+  background-size: auto;
   width: 100%;
   height: auto;
   background-size: 100%;
@@ -324,8 +348,11 @@ body {
 }
 
 .sponsor-description {
-  height: auto;
-  position: relative;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
   clear: both;
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -335,10 +362,12 @@ body {
 
 .sponsor-img {
   display: flex;
+  width: 50%;
+  flex-wrap: wrap;
 }
 
 .sponsor-img img {
-  margin: 20px;
+  margin: 10px;
   background: #fff;
   height: 100px;
   width: 140px;
@@ -393,6 +422,7 @@ body {
 
 .wsite-speakers {
   display: flex;
+  flex-wrap: wrap !important;
   flex-direction: row;
   padding-bottom: 40px;
   padding-top: 40px;
@@ -414,9 +444,11 @@ body {
 }
 
 .location-content-wrap {
+  display: flex;
+  flex-wrap: wrap;
   padding: 60px 50px;
   position: absolute;
-  bottom: 1500px;
+  bottom: 1200px;
   width: 320px;
   font-family: "Acre-Semibold";
 }
@@ -460,7 +492,9 @@ h2 {
 }
 
 .register-button {
-  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  color: rgba(0, 0, 0, 0.5);
   font-family: "Roboto Bold", sans-serif;
   font-size: 30px;
   cursor: pointer;
@@ -504,6 +538,11 @@ h2 {
   margin: 0;
 }
 
+.past-event {
+  margin: 0 auto;
+  width: 50%;
+}
+
 .subscribe-1 {
   padding: 20px 0px;
   margin: 0 auto;
@@ -544,6 +583,13 @@ h2 {
   background-color: #25286d;
 }
 
+.topic-header {
+  color: #ffffff;
+  background-color: rgba(34, 212, 96, 0.7);
+  padding: none;
+  margin: none;
+}
+
 .sponsor-container {
   margin: 0 auto !important;
   text-align: center;
@@ -565,10 +611,10 @@ h2 {
   align-items: center;
   text-align: center;
   justify-content: space-evenly;
-  background-color: #25286d;
-  font-size: 15px;
+  background-color: #36c3f2;
+  font-size: 25px;
   color: #ffffff;
-  padding: 8px;
+  padding: 18px;
 }
 
 .grid-item-title {
@@ -638,6 +684,24 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
+.address-title {
+  margin-bottom: 10px;
+}
+
+.past-event-container {
+  width: 50%;
+  padding: 30px;
+}
+
+.past-event-block {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.address-body {
+  margin-bottom: 10px;
+}
+
 .subscribe-img {
   display: block;
 }
@@ -646,9 +710,107 @@ h2 {
   margin: 0;
 }
 
+.sponsor-header {
+  font-size: 39.9px !important;
+}
+
 .footer {
   text-align: center;
   background-color: #eee;
+}
+
+@media screen and (min-width: 400px) {
+  .register-button {
+    font-size: 20px;
+  }
+
+  .location-content-wrap {
+    width: 200px;
+    bottom: 1353px;
+    font-size: 10px;
+  }
+
+  .address-title {
+    font-size: 10px;
+  }
+
+  .grid-container {
+    grid-gap: 0.5px;
+    font-size: 10px;
+  }
+
+  .grid-item {
+    font-size: 15px;
+  }
+
+  .grid-item-title {
+    padding: 10px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .jumbotron {
+    background-image: url("../assets/bg.png");
+  }
+
+  .register-button {
+    font-size: 15px;
+  }
+
+  .grid-container {
+    font-size: 15px;
+  }
+
+  .grid-item {
+    font-size: 15px;
+    padding: 10px !important;
+  }
+
+  .grid-item-title {
+    padding: 10px !important;
+  }
+
+  .grid-full {
+    padding: 10px !important;
+  }
+
+  .grid-empty {
+    padding: 10px !important;
+  }
+
+  .address-title {
+    font-size: 7px;
+  }
+
+  .location-content-wrap {
+    width: 100px;
+    height: 80px;
+    padding: 16px;
+    bottom: 1280px;
+    font-size: 7px;
+  }
+
+  .past-event {
+    font-size: 10px;
+  }
+
+  .past-event-block h2 {
+    font-size: 15px;
+  }
+
+  .past-events-content-wrapper {
+    font-family: "Acre-Semibold" !important;
+    padding: 2px 10px;
+  }
+
+  .sponsor-header {
+    font-size: 20px !important;
+    font-weight: bold;
+  }
+
+  .paragraph {
+    width: 70%;
+  }
 }
 
 @font-face {
