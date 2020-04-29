@@ -1,6 +1,6 @@
 version: 2.1
 executors:
-    docker_publisher:
+    docker-publisher:
         environment:
             CLIENT_IMAGE: mdecker84/cc_build_client
             NGINX_IMAGE: mdecker84/cc_build_nginx
@@ -30,29 +30,68 @@ jobs:
                 paths:
                     - ./image-client.tar    
                     - ./image-nginx.tar
-        publish-latest:
-            executor: docker_publisher
-            steps:
-                - attach_workspace:
-                    at: /tmp/workspace
-                - setup_remote_docker
-                - run:
-                    name: Load archived Docker image
-                    command: |
-                        docker load -i /tmp/workspace/image-client.tar
-                        docker load -i /tmp/workspace/image-nginx.tar
-                - run:
-                    name: Publish Docker Image to Docker Hub
-                    command: |
-                        echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_ID --password-stdin
-                        docker push $CLIENT_IMAGE:latest
-                        docker push $NGINX_IMAGE:latest
+    publish-latest:
+        executor: docker-publisher
+        steps:
+            - attach_workspace:
+                at: /tmp/workspace
+            - setup_remote_docker
+            - run:
+                name: Load archived Docker image
+                command: |
+                    docker load -i /tmp/workspace/image-client.tar
+                    docker load -i /tmp/workspace/image-nginx.tar
+            - run:
+                name: Publish Docker Image to Docker Hub
+                command: |
+                    echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_ID --password-stdin
+                    docker push $CLIENT_IMAGE:latest
+                    docker push $NGINX_IMAGE:latest
 
-workflow:
+    deploy:
+        executor: docker-deploy
+        steps:
+            - checkout
+            - run: sudo chown -R circleci:circleci /usr/local/bin
+            - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
+            - restore_cache:
+                keys:
+                    - deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+            - run:
+                name: Install awscli
+                command: |
+                    sudo pip install awscli --upgrade
+                    sudo pip install awsebcli --upgrade
+                    sudo pip install virtualenv
+                    sudo pip install pipenv
+            - save_cache:
+                key: deps9-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
+                paths:
+                    - ".venv"
+                    - "/usr/local/bin"
+                    - "/usr/local/lib/python3.6/site-packages"
+            - run: 
+                name: Create aws credentials
+                command: |
+                    chmod +x ./setup-eb.sh
+                    ./setup-eb.sh
+            - run:
+                name: Deploying
+                command: |  
+                    eb use Truthandculture-env --profile prod
+                    eb deploy --profile prod
+
+workflows:
     version: 2
-    buiild-master:
+    build-master:
         jobs:
             - build:
+                filters:
+                    branches:
+                        only: master
+            - publish-latest:
+                requires:
+                    - build
                 filters:
                     branches:
                         only: master
