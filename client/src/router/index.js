@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
 import Event from "@/views/Event.vue";
 import Speaker from "@/views/Speaker.vue";
 

@@ -7,12 +7,12 @@
 <script>
 // @ is an alias to /src
 import Splash from "@/components/Splash.vue";
-import Home from "@/components/Home.vue";
+// import Home from "@/components/Home.vue";
 
 export default {
   name: "home",
   components: {
-    "app-splash": Splash
+    "app-home": Splash
   }
 };
 </script>
