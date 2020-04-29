@@ -9,9 +9,9 @@
         <div class="wsite-spacer"></div>
         <div style="text-align:center;">
           <div style="height: 10px; overflow: hidden;"></div>
-          <a href="#" target="_blank">
+          <!-- <a href="#" target="_blank">
             <span class="wsite-button-inner">Register Now</span>
-          </a>
+          </a> -->
           <div style="height: 10px; overflow: hidden;"></div>
           <div class="paragraph">15TH AUGUST 2020</div>
           <div style="height: 10px; overflow: hidden;"></div>
@@ -45,14 +45,14 @@
         </md-avatar>
       </div>
     </div>
-    <div id="register" class="ticket-container" style="text-align:center;">
+    <!-- <div id="register" class="ticket-container" style="text-align:center;">
       <div>
         <h2 class="wsite-content-title">
           <font color="#ffffff" size="7">REGISTER NOW!</font>
         </h2>
       </div>
       <div class="register-button">GET TICKET</div>
-    </div>
+    </div> -->
     <div id="agenda">
       <div class="agenda">
         <h2 class="center-title" style="margin: 0">
@@ -207,9 +207,7 @@
         </a>
       </div>
     </div>
-    <div
-      style="display:flex; flex-direction: row; justify-content: space-evenly; flex-wrap:wrap"
-    >
+    <div class="past-event-all">
       <div class="past-event-container">
         <div class="past-event-block">
           <h2>Interested in past recordings?</h2>
@@ -224,7 +222,7 @@
           <span class="past-events-content-wrapper">View All</span>
         </div>
       </div>
-      <div style="width: 50%; float:right;">
+      <div class="past-event-photo">
         <img src="../assets/past-event.jpg" />
       </div>
     </div>
@@ -719,6 +717,18 @@ h2 {
   background-color: #eee;
 }
 
+.past-event-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.past-event-photo {
+  width: 50%;
+  float: right;
+}
+
 @media screen and (min-width: 400px) {
   .register-button {
     font-size: 20px;
@@ -786,16 +796,29 @@ h2 {
     width: 100px;
     height: 80px;
     padding: 16px;
-    bottom: 1280px;
+    bottom: 1520px;
     font-size: 7px;
+  }
+
+  .past-event-container {
+    width: 100%;
   }
 
   .past-event {
     font-size: 10px;
+    flex-wrap: wrap;
   }
 
   .past-event-block h2 {
+    font-size: 35px;
+  }
+
+  .past-event p {
+    width: 100%;
     font-size: 15px;
+  }
+  .past-event-block {
+    width: 100%;
   }
 
   .past-events-content-wrapper {
@@ -810,6 +833,15 @@ h2 {
 
   .paragraph {
     width: 70%;
+  }
+
+  .past-event-all {
+    flex-direction: column;
+  }
+
+  .past-event-photo {
+    width: 100%;
+    float: right;
   }
 }
 

@@ -18,7 +18,7 @@
           <b-nav-item href="#register">Register</b-nav-item>
           <b-nav-item href="#location">Location</b-nav-item>
           <b-nav-item href="#">FAQ</b-nav-item>
-          <b-nav-item class="donate" href="#">Donate</b-nav-item>
+          <!-- <b-nav-item class="donate" href="#">Donate</b-nav-item> -->
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -35,6 +35,10 @@ export default {
   background-color: #000000 !important;
 }
 
+nav.navbar.navbar-dark.bg-info.fixed-top.navbar-expand-lg {
+  height: 50px !important;
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 1);
   text-decoration: none;
@@ -49,8 +53,8 @@ export default {
 .logo {
   background-color: #ffffff;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 b-navbar-nav .b-navbar-nav {
