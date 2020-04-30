@@ -106,3 +106,9 @@ workflows:
                 filters:
                     branches:
                         only: master
+            - deploy:
+                requires:
+                    - publish-latest
+                filters:
+                    branches:
+                        only: master
