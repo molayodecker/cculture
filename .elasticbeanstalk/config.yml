@@ -1,0 +1,22 @@
+branch-defaults:
+  FixConfiguration:
+    environment: Truthandculture-env
+  master:
+    environment: Truthandculture-env
+environment-defaults:
+  Truthandculture-env:
+    branch: null
+    repository: null
+global:
+  application_name: truthandculture
+  default_ec2_keyname: null
+  default_platform: arn:aws:elasticbeanstalk:us-east-1::platform/Multi-container Docker
+    running on 64bit Amazon Linux/2.20.0
+  default_region: us-east-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  sc: git
+  workspace_type: Application
